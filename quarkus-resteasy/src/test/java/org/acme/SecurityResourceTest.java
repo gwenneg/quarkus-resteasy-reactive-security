@@ -20,9 +20,9 @@ public class SecurityResourceTest {
     }
 
     @Test
-    public void testStringBody() {
+    public void testTextBody() {
         given()
-                .contentType(ContentType.JSON)
+                .contentType(ContentType.TEXT)
                 .when()
                 .post("/security/string-body")
                 .then()

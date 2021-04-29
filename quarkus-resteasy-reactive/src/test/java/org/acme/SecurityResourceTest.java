@@ -5,7 +5,6 @@ import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
 public class SecurityResourceTest {
@@ -21,9 +20,9 @@ public class SecurityResourceTest {
     }
 
     @Test
-    public void testStringBody() {
+    public void testTextBody() {
         given()
-                .contentType(ContentType.JSON)
+                .contentType(ContentType.TEXT)
                 .when()
                 .post("/security/string-body")
                 .then()
